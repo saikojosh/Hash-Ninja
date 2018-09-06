@@ -20,10 +20,10 @@ function hashNinja (payload, algorithm = `sha512`, encoding = `hex`) {
 }
 
 /*
- * Returns an MD5 hash of the payload.
+ * Returns an SHA512 hash of the payload.
  */
-hashNinja.md5 = function md5 (payload, encoding = void (0)) {
-	return hashNinja(payload, `md5`, encoding);
+hashNinja.sha512 = function sha512 (payload, encoding = void (0)) {
+	return hashNinja(payload, `sha512`, encoding);
 };
 
 /*
@@ -34,10 +34,17 @@ hashNinja.sha256 = function sha256 (payload, encoding = void (0)) {
 };
 
 /*
- * Returns an SHA512 hash of the payload.
+ * Returns an SHA1 hash of the payload.
  */
-hashNinja.sha512 = function sha512 (payload, encoding = void (0)) {
-	return hashNinja(payload, `sha512`, encoding);
+hashNinja.sha1 = function sha1 (payload, encoding = void (0)) {
+	return hashNinja(payload, `sha1`, encoding);
+};
+
+/*
+ * Returns an MD5 hash of the payload.
+ */
+hashNinja.md5 = function md5 (payload, encoding = void (0)) {
+	return hashNinja(payload, `md5`, encoding);
 };
 
 /*
